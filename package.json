@@ -1,1 +1,19 @@
-{}
+{
+    "name": "drone-quickstart",
+    "description": "This repository provides configuration and instructions for how to get started with [Drone CI](https://www.drone.io) from [Harness](https://harness.io)",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SaniarVM/drone-quickstart.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/SaniarVM/drone-quickstart/issues"
+    },
+    "homepage": "https://github.com/SaniarVM/drone-quickstart#readme"
+}
