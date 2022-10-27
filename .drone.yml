@@ -1,20 +1,28 @@
 ---
 kind: pipeline
 type: docker
-name: default
+name: test
 
-# remove this section if your CPU is amd64
-platform:
-  os: linux
-  arch: arm64
+trigger:
+  event:
+    - push
 
 steps:
-- name: hello
-  image: busybox
+- name: jest
+  image: cfreak/jest
+  pull: always
   commands:
-  - echo hello world
-  - wassap bro
- 
-trigger:
-  branch:
-  - main
+  - echo $0
+
+- name: NodeJest
+  image: node:latest
+  commands:
+  - |
+    echo install node.js package manager
+    npm install
+    echo getting node version
+    node --version
+    echo run jest test
+    npm test
+  depends_on: 
+    - jest
