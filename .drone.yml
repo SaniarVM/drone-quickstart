@@ -14,7 +14,7 @@ steps:
   commands:
   - echo $0
 
-- name: NodeJest
+- name: Node Jest
   image: node:latest
   commands:
   - |
