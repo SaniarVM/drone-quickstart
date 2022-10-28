@@ -3,10 +3,6 @@ kind: pipeline
 type: docker
 name: test
 
-trigger:
-  event:
-    - push
-
 steps:
 - name: jest
   image: cfreak/jest
@@ -26,3 +22,7 @@ steps:
     npm test
   depends_on: 
     - jest
+
+trigger:
+  branch:
+  - main
