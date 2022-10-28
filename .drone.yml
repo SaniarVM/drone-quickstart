@@ -8,7 +8,7 @@ steps:
   image: busybox
   commands:
   - echo hello world
-  - how are you today!
+  - echo how are you today!
  
 trigger:
   branch:
